@@ -115,6 +115,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, args):
         """ Create an object of any class"""
+        print(args)
+        # adding parameters
 
         param = args.split(" ")
         print(param)
@@ -129,7 +131,7 @@ class HBNBCommand(cmd.Cmd):
 
         # list diviion
         x_list = []
-        for x in param:
+        for x in parami_list:
 
             box_list = x.split('=')
             # string evaluation
