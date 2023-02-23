@@ -7,10 +7,10 @@ import os
 
 
 class test_fileStorage(unittest.TestCase):
-    """ Class to test the file storage method """
+    """ class for testing models """
 
     def setUp(self):
-        """ Set up test environment """
+        """ test setup """
         del_list = []
         for key in storage._FileStorage__objects.keys():
             del_list.append(key)
@@ -18,25 +18,25 @@ class test_fileStorage(unittest.TestCase):
             del storage._FileStorage__objects[key]
 
     def tearDown(self):
-        """ Remove storage file at end of tests """
+        """ remove testfiles """
         try:
             os.remove('file.json')
         except:
             pass
 
     def test_obj_list_empty(self):
-        """ __objects is initially empty """
+        """ __objects is null """
         self.assertEqual(len(storage.all()), 0)
 
     def test_new(self):
-        """ New object is correctly added to __objects """
+        """ adding a new object to __objects """
         new = BaseModel()
         for obj in storage.all().values():
             temp = obj
         self.assertTrue(temp is obj)
 
     def test_all(self):
-        """ __objects is properly returned """
+        """ __return object """
         new = BaseModel()
         temp = storage.all()
         self.assertIsInstance(temp, dict)
