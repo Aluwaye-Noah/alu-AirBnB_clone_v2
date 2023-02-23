@@ -137,7 +137,7 @@ class HBNBCommand(cmd.Cmd):
             # string evaluation
             if '\"' in x:
                 box_list[1] = str(box_list[1].replace('\"', ''))
-                if '_' box_list[1]:
+                if '_' in box_list[1]:
                     box_list[1].replace('_', '')
 
             elif '.' in box_list[1]:
