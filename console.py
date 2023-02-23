@@ -150,8 +150,6 @@ class HBNBCommand(cmd.Cmd):
 
             x_list.append(box_list)
             print(x_list)
-
-
         if not args:
             print("** class name missing **")
             return
