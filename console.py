@@ -132,7 +132,7 @@ class HBNBCommand(cmd.Cmd):
         for x in param:
 
             box_list = x.split('=')
-            #string evaluation
+            # string evaluation
             if '\"' in x:
                 box_list[1] = str(box_list[1].replace('\"', ''))
                 if '_' box_list[1]:
@@ -145,7 +145,7 @@ class HBNBCommand(cmd.Cmd):
             elif '.' not in x \
                     and '_' not in box_list[1] \
                     and '\"' not in box_list[1]:
-                        # integer evaluation
+                    # integer evaluation
                 box_list[1] = int(box_list[1])
 
             x_list.append(box_list)
