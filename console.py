@@ -129,7 +129,7 @@ class HBNBCommand(cmd.Cmd):
 
         # list diviion
         x_list = []
-        for x in param_list:
+        for x in param:
 
             box_list = x.split('=')
             #string evaluation
