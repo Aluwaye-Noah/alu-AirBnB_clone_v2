@@ -115,6 +115,43 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, args):
         """ Create an object of any class"""
+
+        param = args.split(" ")
+        print(param)
+
+        cls_arg = str(param[0])
+        param_list = []
+        dict_list = {}
+
+        for x in param:
+            if '=' x:
+                param_list.append(x)
+
+        # list diviion
+        x_list = []
+        for x in param_list:
+
+            box_list = x.split('=')
+            #string evaluation
+            if '\"' in x:
+                box_list[1] = str(box_list[1].replace('\"', ''))
+                if '_' box_list[1]:
+                    box_list[1].replace('_', '')
+
+            elif '.' in box_list[1]:
+                # float evaluation
+                box_list[1] = float(box_list[1])
+
+            elif '.' not in x \
+                    and '_' not in box_list[1] \
+                    and '\"' not in box_list[1]:
+                        # integer evaluation
+                box_list[1] = int(box_list[1])
+
+            x_list.append(box_list)
+            print(x_list)
+
+
         if not args:
             print("** class name missing **")
             return
