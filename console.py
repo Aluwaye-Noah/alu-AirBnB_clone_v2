@@ -145,7 +145,7 @@ class HBNBCommand(cmd.Cmd):
             elif '.' not in x \
                     and '_' not in box_list[1] \
                     and '\"' not in box_list[1]:
-                    # integer evaluation
+                # integer evaluation
                 box_list[1] = int(box_list[1])
 
             x_list.append(box_list)
