@@ -131,7 +131,7 @@ class HBNBCommand(cmd.Cmd):
 
         # list diviion
         x_list = []
-        for x in parami_list:
+        for x in param_list:
 
             box_list = x.split('=')
             # string evaluation
