@@ -317,7 +317,7 @@ class HBNBCommand(cmd.Cmd):
             args = args.partition(' ')
 
             # if att_name was not quoted arg
-            if not att_name and args[0] in not ' ':
+            if not att_name and args[0] not in ' ':
                 att_name = args[0]
             # check for quoted val arg
             if args[2] and args[2][0] in '\"':
