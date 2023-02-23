@@ -126,7 +126,7 @@ class HBNBCommand(cmd.Cmd):
         dict_list = {}
 
         for x in param:
-            if '=' x:
+            if '=' in x:
                 param_list.append(x)
 
         # list diviion
